@@ -7,12 +7,10 @@
 # @lc code=start
 class Solution:
     def largestGoodInteger(self, num: str) -> str:
-        maxgood = ""
-        for i in range(len(num) -2):
-            if num[i]== num[i+1]== num[i+2]:
-                triple = num[i: i +3]
-                if triple>maxgood:
-                    maxgood= triple
-        return maxgood
+        for i in range(9,-1,-1):
+            ans = str(i)*3
+            if ans in num:
+                return ans
+        return "" 
 # @lc code=end
 
